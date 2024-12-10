@@ -133,20 +133,12 @@ The application is optimized for:
 - Quick recovery from interruptions
 - Smooth UI updates during long operations
 
-### Testing Framework
-
-The application includes comprehensive testing:
-- Unit tests for core functionality
-- Integration tests for system interactions
-- UI tests for user workflows
-- Security testing for privileged operations
 
 ## Integration Guidelines
 
 ### System Requirements
 Detailed specifications for deployment:
 - macOS 14.0 or later
-- 10GB minimum free space
 - Administrative access
 - Network connectivity
 
@@ -158,7 +150,5 @@ Step-by-step guide for system administrators:
 4. Verification steps
 
 ---
-
-This documentation is maintained and updated regularly to reflect the latest changes and improvements in the MDM Migrator application.
 
 Version: 1.0
