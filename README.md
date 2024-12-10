@@ -53,9 +53,7 @@ MDM Migrator handles the complete migration process through several automated st
 
 ## Documentation
 
-Comprehensive documentation is available:
-- [User Guide](docs/user-guide.md)
-- [Technical Documentation](docs/technicaldocumentation.md)
+Comprehensive documentation is available.
 
 ## Contributing
 
@@ -64,3 +62,13 @@ Contributions to MDM Migrator are always welcome.
 ---
 © 2024 [IntuneInRealLife]. All rights reserved.
 © 2024 [MDMMigrator]. All rights reserved.
+
+## Disclaimer
+
+This tool is provided "AS IS" without warranty of any kind. The developer and/or distributor of this software explicitly disclaim all responsibility and liability for any consequences resulting from the use of this software, including but not limited to:
+- Data loss or corruption
+- System configuration changes or failures
+- Network connectivity issues
+- Business interruption
+- Device performance issues
+- Any direct, indirect, incidental, or consequential damages. The entire risk arising out of the use of this tool and associated documentation remains with you.
