@@ -79,14 +79,14 @@ Watch a quick demonstration of the MDM migration process:
 
 ## Installation
 
-1. Download the latest release package
-3. Run the installer
-4. The tool launches automatically after installation and does not require any additional rights.
-5. For manual launch from Applications folder, please use:
+- Download the latest release package
+- Run the installer
+- The tool launches automatically after installation and does not require any additional rights.
+- For manual launch from Applications folder, please use:
    
 **sudo /Applications/MDM\ Migrator.app/Contents/MacOS/MDM\ Migrator**
 
-6. Follow the setup wizard
+- Follow the setup wizard
 
 ## Usage
 
