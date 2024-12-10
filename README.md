@@ -55,9 +55,7 @@ MDM Migrator handles the complete migration process through several automated st
 
 Comprehensive documentation is available:
 - [User Guide](docs/user-guide.md)
-- [Technical Documentation](docs/technical.md)
-- [Troubleshooting Guide](docs/troubleshooting.md)
-- [Security Overview](docs/security.md)
+- [Technical Documentation](docs/technicaldocumentation.md)
 
 ## Contributing
 
