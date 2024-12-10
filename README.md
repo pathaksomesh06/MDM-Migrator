@@ -78,7 +78,7 @@ Watch a quick demonstration of the MDM migration process:
 
 ## Installation
 
-- Download the latest release package
+- Download the latest release from the [Releases](https://github.com/pathaksomesh06/MDM-Migrator/releases/tag/v1.0) page.
 - Run the installer
 - The tool launches automatically after installation and does not require any additional rights.
 - For manual launch from Applications folder, please use:
