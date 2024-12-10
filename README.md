@@ -26,7 +26,12 @@ MDM Migrator handles the complete migration process through several automated st
 ![Screenshots](screenshots/10.png)
 
 ### Video
-![Screenshots](screenshots/MDMMigrator.mp4)
+Watch a quick demonstration of the MDM migration process:
+
+<video width="100%" controls>
+  <source src="screenshots/MDMMigrator.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 ## System Requirements
@@ -37,6 +42,41 @@ MDM Migrator handles the complete migration process through several automated st
 - Minimum 10GB free disk space
 - Valid Jamf enrollment
 - Microsoft Intune license
+
+### Required Setup Steps
+
+#### 1. Apple Business Manager (ABM) Configuration
+- Assign the Mac device to Apple Business Manager
+- Verify the device appears in ABM inventory
+- Ensure ABM has the correct MDM server tokens
+
+#### 2. Microsoft Intune Configuration
+- Sync ABM token in Intune Admin Center
+- Verify the sync completed successfully
+- Assign required device profiles
+  - Enrollment profile
+  - Configuration profiles
+  - Compliance policies
+
+#### 3. Synchronization
+- Wait for ABM-Intune sync to complete
+- Verify device appears in Intune inventory
+- Confirm profile assignments are active
+
+### Pre-Migration Checklist
+✓ Device is enrolled in Jamf
+✓ Device appears in ABM
+✓ ABM token synced with Intune
+✓ Required profiles assigned
+✓ Sync completion verified
+✓ Backup of important data
+✓ Network connectivity confirmed
+
+### Important Notes
+- Sync times may vary depending on your environment
+- Profile assignments might take up to 15 minutes to propagate
+- Verify all assignments before proceeding with migration
+- Keep device connected to network throughout the process
 
 ## Installation
 
