@@ -26,7 +26,7 @@ MDM Migrator handles the complete migration process through several automated st
 ![Screenshots](screenshots/10.png)
 
 ### Video
-![Screenshots](screenshots/MDM Migrator.MOV)
+![Screenshots](screenshots/MDM%20Migrator.MOV)
 
 
 ## System Requirements
