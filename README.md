@@ -85,6 +85,7 @@ Watch a quick demonstration of the MDM migration process:
 5. For manual launch from Applications folder, please use:
    
 **sudo /Applications/MDM\ Migrator.app/Contents/MacOS/MDM\ Migrator**
+
 6. Follow the setup wizard
 
 ## Usage
