@@ -30,7 +30,6 @@ Watch a quick demonstration of the MDM migration process:
 
 <video width="100%" controls>
   <source src="screenshots/MDMMigrator.mp4" type="video/mp4">
-  Your browser does not support the video tag.
 </video>
 
 
