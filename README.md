@@ -13,6 +13,22 @@ MDM Migrator handles the complete migration process through several automated st
 - **Security Management**: Secure handling of FileVault key rotation
 - **Progress Monitoring**: Real-time status updates and detailed logging
 
+### Screenshots
+![Screenshots](screenshots/1.png)
+![Screenshots](screenshots/2.png)
+![Screenshots](screenshots/3.png)
+![Screenshots](screenshots/4.png)
+![Screenshots](screenshots/5.png)
+![Screenshots](screenshots/6.png)
+![Screenshots](screenshots/7.png)
+![Screenshots](screenshots/8.png)
+![Screenshots](screenshots/9.png)
+![Screenshots](screenshots/10.png)
+
+### Video
+![Screenshots](screenshots/MDM Migrator.MOV)
+
+
 ## System Requirements
 
 - macOS 14.0 or later
