@@ -38,7 +38,6 @@ Watch a quick demonstration of the MDM migration process:
 - macOS 14.0 or later
 - Administrative privileges
 - Active internet connection
-- Minimum 10GB free disk space
 - Valid Jamf enrollment
 - Microsoft Intune license
 
