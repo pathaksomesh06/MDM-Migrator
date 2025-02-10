@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDisplayName</key>
+    <string>MDM Migrator</string>
+    <key>CFBundleExecutable</key>
+    <string>MDM Migrator</string>
+    <key>CFBundleIdentifier</key>
+    <string>IntuneIRL.MDMMigrator</string>
+    <key>CFBundleName</key>
+    <string>MDM Migrator</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+        <string>MacOSX</string>
+    </array>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.utilities</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>14.0</string>
+    <key>LSApplicationQueriesSchemes</key>
+        <array>
+            <string>x-apple.systempreferences</string>
+        </array>
+    <key>NSFileAccessUsageDescription</key>
+    <string>MDM Migrator needs access to system files to handle the migration process securely.</string>
+    <key>NSPrincipalClass</key>
+    <string>NSApplication</string>
+    <key>NSAppleEventsUsageDescription</key>
+    <string>MDM Migrator needs to control System Settings to install helper tools.</string>
+    <key>NSRequiresAquaSystemAppearance</key>
+    <true/>
+    <key>NSSystemAdministrationUsageDescription</key>
+    <string>MDM Migrator requires administrative access to manage MDM profiles and perform the migration process.</string>
+    <key>SMPrivilegedExecutables</key>
+    <dict>
+        <key>IntuneIRL.MDMMigrator.helper</key>
+        <string>identifier "IntuneIRL.MDMMigrator.helper" and anchor apple generic</string>
+    </dict>
+</dict>
+</plist>

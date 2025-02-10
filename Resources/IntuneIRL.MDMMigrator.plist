@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>IntuneIRL.MDMMigrator</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Applications/MDM Migrator.app/Contents/MacOS/MDM Migrator</string>
+    </array>
+    <key>RunAtLoad</key>
+    <false/>
+    <key>UserName</key>
+    <string>root</string>
+    <key>GroupName</key>
+    <string>wheel</string>
+    <key>KeepAlive</key>
+    <false/>
+    <key>StandardOutPath</key>
+    <string>/Users/Shared/mdmmigrator.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/Shared/mdmmigrator.error.log</string>
+    <key>ProcessType</key>
+    <string>Interactive</string>
+    <key>SessionCreate</key>
+    <true/>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>DISPLAY</key>
+        <string>:0</string>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+</dict>
+</plist>

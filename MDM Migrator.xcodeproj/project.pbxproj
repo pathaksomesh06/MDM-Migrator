@@ -1,0 +1,898 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB0D323E2D46C1C100D610C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0D323D2D46C1C100D610C3 /* Foundation.framework */; };
+		FB0D32402D46C1C900D610C3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0D323F2D46C1C900D610C3 /* Security.framework */; };
+		FB0D32422D46C1D000D610C3 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0D32412D46C1D000D610C3 /* ServiceManagement.framework */; };
+		FB0D32682D47842000D610C3 /* IntuneIRL.MDMMigrator.helper in Helper Tool Binary */ = {isa = PBXBuildFile; fileRef = FBB2048C2D410ACA007E7BAE /* IntuneIRL.MDMMigrator.helper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		FB68CDC52CD2D3890062EE31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68CDBD2CD2D3890062EE31 /* ContentView.swift */; };
+		FB68CDC62CD2D3890062EE31 /* Intune4MacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68CDC02CD2D3890062EE31 /* Intune4MacApp.swift */; };
+		FB68CDC82CD2D3890062EE31 /* MigrationProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68CDC22CD2D3890062EE31 /* MigrationProgressView.swift */; };
+		FB68CDC92CD2D3890062EE31 /* PreRequisitesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68CDC32CD2D3890062EE31 /* PreRequisitesView.swift */; };
+		FB68CDCA2CD2D3890062EE31 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68CDC42CD2D3890062EE31 /* WelcomeView.swift */; };
+		FB68CDD72CD3892F0062EE31 /* DialogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68CDD62CD3892F0062EE31 /* DialogService.swift */; };
+		FB68CDD92CD3893F0062EE31 /* PrivilegedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68CDD82CD3893F0062EE31 /* PrivilegedService.swift */; };
+		FB68CDDB2CD389900062EE31 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68CDDA2CD389900062EE31 /* NotificationService.swift */; };
+		FB68CDDD2CD389A10062EE31 /* MigrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68CDDC2CD389A10062EE31 /* MigrationService.swift */; };
+		FB68CDE02CD389BA0062EE31 /* MigrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68CDDF2CD389BA0062EE31 /* MigrationState.swift */; };
+		FB68CDE22CD389CA0062EE31 /* SystemRequirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68CDE12CD389CA0062EE31 /* SystemRequirements.swift */; };
+		FB68CDE52CD389E00062EE31 /* ShellCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68CDE42CD389E00062EE31 /* ShellCommand.swift */; };
+		FB72D6DD2CE4F138002A22A0 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72D6DC2CE4F138002A22A0 /* SplashView.swift */; };
+		FBAF561D2CCF9EE600050ADA /* reissueKey.sh in Resources */ = {isa = PBXBuildFile; fileRef = FBAF561C2CCF9ECA00050ADA /* reissueKey.sh */; };
+		FBB204A22D411D0D007E7BAE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB204A12D411D0D007E7BAE /* Logger.swift */; };
+		FBB204A42D411D20007E7BAE /* MigrationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB204A32D411D20007E7BAE /* MigrationTypes.swift */; };
+		FBB204A52D411D20007E7BAE /* MigrationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB204A32D411D20007E7BAE /* MigrationTypes.swift */; };
+		FBB204A62D411D4A007E7BAE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB204A12D411D0D007E7BAE /* Logger.swift */; };
+		FBB204A72D411E54007E7BAE /* HelperToolServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB2049E2D4117F7007E7BAE /* HelperToolServiceManager.swift */; };
+		FBB49D0F2CD7A00200431F88 /* PrivilegeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB49D0E2CD7A00200431F88 /* PrivilegeManager.swift */; };
+		FBB49D112CD7A90000431F88 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB49D102CD7A8FF00431F88 /* AppState.swift */; };
+		FBB49D132CD7A91C00431F88 /* RequestPrivilegesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB49D122CD7A91B00431F88 /* RequestPrivilegesView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB4308872CC436D50036E800 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB43086D2CC436D30036E800 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB4308742CC436D30036E800;
+			remoteInfo = Intune4Mac;
+		};
+		FB4308912CC436D50036E800 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB43086D2CC436D30036E800 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB4308742CC436D30036E800;
+			remoteInfo = Intune4Mac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FB0D326F2D481D3000D610C3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchDaemons;
+			dstSubfolderSpec = 1;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB3688B32CE7A57B00D20144 /* Helper Tool Binary */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = Contents/Library/LaunchServices;
+			dstSubfolderSpec = 1;
+			files = (
+				FB0D32682D47842000D610C3 /* IntuneIRL.MDMMigrator.helper in Helper Tool Binary */,
+			);
+			name = "Helper Tool Binary";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FB0D323D2D46C1C100D610C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB0D323F2D46C1C900D610C3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FB0D32412D46C1D000D610C3 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		FB0D324E2D477FDE00D610C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB0D326A2D4785C900D610C3 /* PropertyListModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListModifier.swift; sourceTree = "<group>"; };
+		FB4308752CC436D30036E800 /* MDM Migrator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MDM Migrator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB4308862CC436D50036E800 /* MDM MigratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MDM MigratorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB4308902CC436D50036E800 /* MDM MigratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MDM MigratorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB68CDBD2CD2D3890062EE31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FB68CDC02CD2D3890062EE31 /* Intune4MacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intune4MacApp.swift; sourceTree = "<group>"; };
+		FB68CDC22CD2D3890062EE31 /* MigrationProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationProgressView.swift; sourceTree = "<group>"; };
+		FB68CDC32CD2D3890062EE31 /* PreRequisitesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreRequisitesView.swift; sourceTree = "<group>"; };
+		FB68CDC42CD2D3890062EE31 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		FB68CDD62CD3892F0062EE31 /* DialogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogService.swift; sourceTree = "<group>"; };
+		FB68CDD82CD3893F0062EE31 /* PrivilegedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivilegedService.swift; sourceTree = "<group>"; };
+		FB68CDDA2CD389900062EE31 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		FB68CDDC2CD389A10062EE31 /* MigrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationService.swift; sourceTree = "<group>"; };
+		FB68CDDF2CD389BA0062EE31 /* MigrationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationState.swift; sourceTree = "<group>"; };
+		FB68CDE12CD389CA0062EE31 /* SystemRequirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemRequirements.swift; sourceTree = "<group>"; };
+		FB68CDE42CD389E00062EE31 /* ShellCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellCommand.swift; sourceTree = "<group>"; };
+		FB72D6DC2CE4F138002A22A0 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		FBAF561C2CCF9ECA00050ADA /* reissueKey.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = reissueKey.sh; sourceTree = "<group>"; };
+		FBB2048C2D410ACA007E7BAE /* IntuneIRL.MDMMigrator.helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IntuneIRL.MDMMigrator.helper; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBB2049E2D4117F7007E7BAE /* HelperToolServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperToolServiceManager.swift; sourceTree = "<group>"; };
+		FBB204A12D411D0D007E7BAE /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		FBB204A32D411D20007E7BAE /* MigrationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationTypes.swift; sourceTree = "<group>"; };
+		FBB49D0E2CD7A00200431F88 /* PrivilegeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivilegeManager.swift; sourceTree = "<group>"; };
+		FBB49D102CD7A8FF00431F88 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		FBB49D122CD7A91B00431F88 /* RequestPrivilegesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPrivilegesView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FBCA92982D468B7300545B3D /* Exceptions for "MDMMigratorHelper" folder in "MDM Migrator" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				HelperProtocol.swift,
+			);
+			target = FB4308742CC436D30036E800 /* MDM Migrator */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		FB0D32712D481D4F00D610C3 /* Exceptions for "MDMMigratorHelper" folder in "Copy Files" phase from "MDM Migrator" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				IntuneIRL.MDMMigrator.helper.plist = (CodeSignOnCopy, );
+			};
+			buildPhase = FB0D326F2D481D3000D610C3 /* CopyFiles */;
+			membershipExceptions = (
+				IntuneIRL.MDMMigrator.helper.plist,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FB4308772CC436D30036E800 /* Intune4Mac */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Intune4Mac;
+			sourceTree = "<group>";
+		};
+		FB4308892CC436D50036E800 /* Intune4MacTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Intune4MacTests;
+			sourceTree = "<group>";
+		};
+		FB4308932CC436D50036E800 /* Intune4MacUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Intune4MacUITests;
+			sourceTree = "<group>";
+		};
+		FBB2048D2D410ACA007E7BAE /* MDMMigratorHelper */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FBCA92982D468B7300545B3D /* Exceptions for "MDMMigratorHelper" folder in "MDM Migrator" target */,
+				FB0D32712D481D4F00D610C3 /* Exceptions for "MDMMigratorHelper" folder in "Copy Files" phase from "MDM Migrator" target */,
+			);
+			path = MDMMigratorHelper;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB4308722CC436D30036E800 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB4308832CC436D50036E800 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB43088D2CC436D50036E800 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB204892D410ACA007E7BAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB0D32422D46C1D000D610C3 /* ServiceManagement.framework in Frameworks */,
+				FB0D32402D46C1C900D610C3 /* Security.framework in Frameworks */,
+				FB0D323E2D46C1C100D610C3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB0D323C2D46C1C100D610C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB0D32412D46C1D000D610C3 /* ServiceManagement.framework */,
+				FB0D323F2D46C1C900D610C3 /* Security.framework */,
+				FB0D323D2D46C1C100D610C3 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB0D32692D4785BA00D610C3 /* BuildScripts */ = {
+			isa = PBXGroup;
+			children = (
+				FB0D326A2D4785C900D610C3 /* PropertyListModifier.swift */,
+			);
+			path = BuildScripts;
+			sourceTree = "<group>";
+		};
+		FB43086C2CC436D30036E800 = {
+			isa = PBXGroup;
+			children = (
+				FB0D32692D4785BA00D610C3 /* BuildScripts */,
+				FBB204A02D411CE4007E7BAE /* Shared */,
+				FB68CDE32CD389D40062EE31 /* commands */,
+				FB68CDDE2CD389AD0062EE31 /* Models */,
+				FB68CDD52CD388EF0062EE31 /* Views */,
+				FB68CDD42CD388E00062EE31 /* Services */,
+				FBAF561B2CCF9EAE00050ADA /* Resources */,
+				FB4308772CC436D30036E800 /* Intune4Mac */,
+				FB4308892CC436D50036E800 /* Intune4MacTests */,
+				FB4308932CC436D50036E800 /* Intune4MacUITests */,
+				FBB2048D2D410ACA007E7BAE /* MDMMigratorHelper */,
+				FB0D323C2D46C1C100D610C3 /* Frameworks */,
+				FB4308762CC436D30036E800 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB4308762CC436D30036E800 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB4308752CC436D30036E800 /* MDM Migrator.app */,
+				FB4308862CC436D50036E800 /* MDM MigratorTests.xctest */,
+				FB4308902CC436D50036E800 /* MDM MigratorUITests.xctest */,
+				FBB2048C2D410ACA007E7BAE /* IntuneIRL.MDMMigrator.helper */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB68CDD42CD388E00062EE31 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FBB2049E2D4117F7007E7BAE /* HelperToolServiceManager.swift */,
+				FB68CDD62CD3892F0062EE31 /* DialogService.swift */,
+				FB68CDD82CD3893F0062EE31 /* PrivilegedService.swift */,
+				FB68CDDA2CD389900062EE31 /* NotificationService.swift */,
+				FB68CDDC2CD389A10062EE31 /* MigrationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FB68CDD52CD388EF0062EE31 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB72D6DC2CE4F138002A22A0 /* SplashView.swift */,
+				FBB49D122CD7A91B00431F88 /* RequestPrivilegesView.swift */,
+				FB68CDC02CD2D3890062EE31 /* Intune4MacApp.swift */,
+				FBB49D0E2CD7A00200431F88 /* PrivilegeManager.swift */,
+				FB68CDC22CD2D3890062EE31 /* MigrationProgressView.swift */,
+				FB68CDC32CD2D3890062EE31 /* PreRequisitesView.swift */,
+				FB68CDC42CD2D3890062EE31 /* WelcomeView.swift */,
+				FB68CDBD2CD2D3890062EE31 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB68CDDE2CD389AD0062EE31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FBB49D102CD7A8FF00431F88 /* AppState.swift */,
+				FB68CDDF2CD389BA0062EE31 /* MigrationState.swift */,
+				FB68CDE12CD389CA0062EE31 /* SystemRequirements.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB68CDE32CD389D40062EE31 /* commands */ = {
+			isa = PBXGroup;
+			children = (
+				FB68CDE42CD389E00062EE31 /* ShellCommand.swift */,
+			);
+			path = commands;
+			sourceTree = "<group>";
+		};
+		FBAF561B2CCF9EAE00050ADA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FBAF561C2CCF9ECA00050ADA /* reissueKey.sh */,
+				FB0D324E2D477FDE00D610C3 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FBB204A02D411CE4007E7BAE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FBB204A12D411D0D007E7BAE /* Logger.swift */,
+				FBB204A32D411D20007E7BAE /* MigrationTypes.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB4308742CC436D30036E800 /* MDM Migrator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB43089A2CC436D50036E800 /* Build configuration list for PBXNativeTarget "MDM Migrator" */;
+			buildPhases = (
+				FB4308712CC436D30036E800 /* Sources */,
+				FB4308722CC436D30036E800 /* Frameworks */,
+				FB4308732CC436D30036E800 /* Resources */,
+				FB3688B32CE7A57B00D20144 /* Helper Tool Binary */,
+				FB0D326F2D481D3000D610C3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FB4308772CC436D30036E800 /* Intune4Mac */,
+			);
+			name = "MDM Migrator";
+			packageProductDependencies = (
+			);
+			productName = Intune4Mac;
+			productReference = FB4308752CC436D30036E800 /* MDM Migrator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB4308852CC436D50036E800 /* MDM MigratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB43089D2CC436D50036E800 /* Build configuration list for PBXNativeTarget "MDM MigratorTests" */;
+			buildPhases = (
+				FB4308822CC436D50036E800 /* Sources */,
+				FB4308832CC436D50036E800 /* Frameworks */,
+				FB4308842CC436D50036E800 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB4308882CC436D50036E800 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FB4308892CC436D50036E800 /* Intune4MacTests */,
+			);
+			name = "MDM MigratorTests";
+			packageProductDependencies = (
+			);
+			productName = Intune4MacTests;
+			productReference = FB4308862CC436D50036E800 /* MDM MigratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB43088F2CC436D50036E800 /* MDM MigratorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB4308A02CC436D50036E800 /* Build configuration list for PBXNativeTarget "MDM MigratorUITests" */;
+			buildPhases = (
+				FB43088C2CC436D50036E800 /* Sources */,
+				FB43088D2CC436D50036E800 /* Frameworks */,
+				FB43088E2CC436D50036E800 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB4308922CC436D50036E800 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FB4308932CC436D50036E800 /* Intune4MacUITests */,
+			);
+			name = "MDM MigratorUITests";
+			packageProductDependencies = (
+			);
+			productName = Intune4MacUITests;
+			productReference = FB4308902CC436D50036E800 /* MDM MigratorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		FBB2048B2D410ACA007E7BAE /* MDMMigratorHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBB204922D410ACA007E7BAE /* Build configuration list for PBXNativeTarget "MDMMigratorHelper" */;
+			buildPhases = (
+				FBB204892D410ACA007E7BAE /* Frameworks */,
+				FBB204882D410ACA007E7BAE /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FBB2048D2D410ACA007E7BAE /* MDMMigratorHelper */,
+			);
+			name = MDMMigratorHelper;
+			packageProductDependencies = (
+			);
+			productName = MDMMigratorHelper;
+			productReference = FBB2048C2D410ACA007E7BAE /* IntuneIRL.MDMMigrator.helper */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB43086D2CC436D30036E800 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					FB4308742CC436D30036E800 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					FB4308852CC436D50036E800 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = FB4308742CC436D30036E800;
+					};
+					FB43088F2CC436D50036E800 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = FB4308742CC436D30036E800;
+					};
+					FBB2048B2D410ACA007E7BAE = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = FB4308702CC436D30036E800 /* Build configuration list for PBXProject "MDM Migrator" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB43086C2CC436D30036E800;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FB4308762CC436D30036E800 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB4308742CC436D30036E800 /* MDM Migrator */,
+				FB4308852CC436D50036E800 /* MDM MigratorTests */,
+				FB43088F2CC436D50036E800 /* MDM MigratorUITests */,
+				FBB2048B2D410ACA007E7BAE /* MDMMigratorHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB4308732CC436D30036E800 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBAF561D2CCF9EE600050ADA /* reissueKey.sh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB4308842CC436D50036E800 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB43088E2CC436D50036E800 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB4308712CC436D30036E800 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB68CDE02CD389BA0062EE31 /* MigrationState.swift in Sources */,
+				FBB49D0F2CD7A00200431F88 /* PrivilegeManager.swift in Sources */,
+				FBB204A42D411D20007E7BAE /* MigrationTypes.swift in Sources */,
+				FB72D6DD2CE4F138002A22A0 /* SplashView.swift in Sources */,
+				FBB49D132CD7A91C00431F88 /* RequestPrivilegesView.swift in Sources */,
+				FB68CDC52CD2D3890062EE31 /* ContentView.swift in Sources */,
+				FB68CDD72CD3892F0062EE31 /* DialogService.swift in Sources */,
+				FB68CDDD2CD389A10062EE31 /* MigrationService.swift in Sources */,
+				FB68CDE22CD389CA0062EE31 /* SystemRequirements.swift in Sources */,
+				FBB49D112CD7A90000431F88 /* AppState.swift in Sources */,
+				FB68CDC62CD2D3890062EE31 /* Intune4MacApp.swift in Sources */,
+				FB68CDDB2CD389900062EE31 /* NotificationService.swift in Sources */,
+				FB68CDC82CD2D3890062EE31 /* MigrationProgressView.swift in Sources */,
+				FBB204A22D411D0D007E7BAE /* Logger.swift in Sources */,
+				FBB204A72D411E54007E7BAE /* HelperToolServiceManager.swift in Sources */,
+				FB68CDE52CD389E00062EE31 /* ShellCommand.swift in Sources */,
+				FB68CDC92CD2D3890062EE31 /* PreRequisitesView.swift in Sources */,
+				FB68CDD92CD3893F0062EE31 /* PrivilegedService.swift in Sources */,
+				FB68CDCA2CD2D3890062EE31 /* WelcomeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB4308822CC436D50036E800 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB43088C2CC436D50036E800 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB204882D410ACA007E7BAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBB204A52D411D20007E7BAE /* MigrationTypes.swift in Sources */,
+				FBB204A62D411D4A007E7BAE /* Logger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB4308882CC436D50036E800 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB4308742CC436D30036E800 /* MDM Migrator */;
+			targetProxy = FB4308872CC436D50036E800 /* PBXContainerItemProxy */;
+		};
+		FB4308922CC436D50036E800 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB4308742CC436D30036E800 /* MDM Migrator */;
+			targetProxy = FB4308912CC436D50036E800 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FB4308982CC436D50036E800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB4308992CC436D50036E800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		FB43089B2CC436D50036E800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Intune4Mac/Intune4Mac.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Intune4Mac/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = LJ3W53UDG4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MDMMigrator;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IntuneIRL.MDMMigrator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = IntuneIRL.MDMMigrator;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FB43089C2CC436D50036E800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = Intune4Mac/Intune4Mac.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Intune4Mac/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = LJ3W53UDG4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MDMMigrator;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IntuneIRL.MDMMigrator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = IntuneIRL.MDMMigrator;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FB43089E2CC436D50036E800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJ3W53UDG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IntuneIRL.Intune4MacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MDM Migrator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MDM Migrator";
+			};
+			name = Debug;
+		};
+		FB43089F2CC436D50036E800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJ3W53UDG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IntuneIRL.Intune4MacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MDM Migrator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MDM Migrator";
+			};
+			name = Release;
+		};
+		FB4308A12CC436D50036E800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJ3W53UDG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IntuneIRL.Intune4MacUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Intune4Mac;
+			};
+			name = Debug;
+		};
+		FB4308A22CC436D50036E800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJ3W53UDG4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = IntuneIRL.Intune4MacUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Intune4Mac;
+			};
+			name = Release;
+		};
+		FBB204902D410ACA007E7BAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALTERNATE_OWNER = root;
+				CODE_SIGN_ENTITLEMENTS = MDMMigratorHelper/MDMMigratorHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = LJ3W53UDG4;
+				DSTROOT = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = MDMMigratorHelper/Info.plist;
+				INSTALL_GROUP = wheel;
+				INSTALL_OWNER = root;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				PRODUCT_BUNDLE_IDENTIFIER = IntuneIRL.MDMMigrator.helper;
+				PRODUCT_NAME = IntuneIRL.MDMMigrator.helper;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FBB204912D410ACA007E7BAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALTERNATE_OWNER = root;
+				CODE_SIGN_ENTITLEMENTS = MDMMigratorHelper/MDMMigratorHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = LJ3W53UDG4;
+				DSTROOT = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = MDMMigratorHelper/Info.plist;
+				INSTALL_GROUP = wheel;
+				INSTALL_OWNER = root;
+				INSTALL_PATH = "";
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				PRODUCT_BUNDLE_IDENTIFIER = IntuneIRL.MDMMigrator.helper;
+				PRODUCT_NAME = IntuneIRL.MDMMigrator.helper;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB4308702CC436D30036E800 /* Build configuration list for PBXProject "MDM Migrator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB4308982CC436D50036E800 /* Debug */,
+				FB4308992CC436D50036E800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB43089A2CC436D50036E800 /* Build configuration list for PBXNativeTarget "MDM Migrator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB43089B2CC436D50036E800 /* Debug */,
+				FB43089C2CC436D50036E800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB43089D2CC436D50036E800 /* Build configuration list for PBXNativeTarget "MDM MigratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB43089E2CC436D50036E800 /* Debug */,
+				FB43089F2CC436D50036E800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB4308A02CC436D50036E800 /* Build configuration list for PBXNativeTarget "MDM MigratorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB4308A12CC436D50036E800 /* Debug */,
+				FB4308A22CC436D50036E800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBB204922D410ACA007E7BAE /* Build configuration list for PBXNativeTarget "MDMMigratorHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBB204902D410ACA007E7BAE /* Debug */,
+				FBB204912D410ACA007E7BAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB43086D2CC436D30036E800 /* Project object */;
+}
