@@ -1,4 +1,6 @@
-# MDM Migrator
+~~MDM Migrator~~
+
+## MDM Migrator is archived and is replaced by JUMP-IN. This source code is no longer updated/managed.
 
 MDM Migrator is a professional macOS application designed to automate and streamline the migration process from Jamf to Microsoft Intune mobile device management. The tool provides a secure, efficient, and user-friendly solution for organizations transitioning their device management infrastructure.
 
